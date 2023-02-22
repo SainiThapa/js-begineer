@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <script src="array.js"></script> -->
+        <title>Validation</title>
+    </head>
+    <body>
+        <h1>Validation of two numbers</h1>
+        <div>
+            <form id="Myform" onsubmit="return validate()">
+            <label for="Num1">Enter the first number</label>
+            <input type="Number" id="num1" name="num1"> <br> <br>
+            <label for="Num2">Enter the second number</label>
+            <input type="number" id="num2" name="num2"> <br> <br>
+            <input type="submit" value="submit">
+            </form>
+        </div>
+        <script>
+            function validate()
+{
+            var a=document.forms["Myform"]["num1"].value;
+             var b=document.forms["Myform"]["num2"].value;
+            if(a == "")
+            {
+                alert("WRONG VALUE ENTERED");
+                return false;
+            }
+            if(b == "")
+            {
+                alert("WRONG VALUE ENTERED");
+                return false;
+            }
+}
+        </script>
+    </body>
+</html>

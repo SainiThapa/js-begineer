@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+</head>
+<body>
+    <h1>Registration</h1>
+    <p>
+        <form id="myform" onsubmit="return validate()">
+            Username: <input type="text" id="name"> <br> <br>
+            Number: <input type="text" id="number"> <br> <br>
+            Gender: <input type="radio" name="gender" id="Male">Male 
+            <input type="radio" name="gender" id="Female">Female <br> <br>
+            <input type="submit" value="Submit">
+        </form>    
+    </p>
+    <script type="text/Javascript">
+        function validate()
+        {
+            var name= document.forms["myform"]["name"].value;
+            var number= document.forms["myform"]["number"].value;
+            if (name=="")
+            {   
+                alert("Enter name");
+                return false;
+            }
+            /* var condition=/^[A-Z a-z]+$/;
+            // var result= name.match(condition);
+            // if (result==NULL)
+            // {
+            //     alert("Name format not valid");
+            //     return false;
+            }*/
+            if (number=="") 
+            {
+                alert("Enter the Number");
+                return false;
+            }
+            else if(isNaN(number))
+            {
+                alert("Enter a valid number");
+            } 
+            // radio validation
+            var male=document.forms["myform"]["Male"].checked;
+            var female=document.forms["myform"]["Female"].checked;
+            if(male==false && female==false)
+            {
+                alert("Gender need to be specified");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

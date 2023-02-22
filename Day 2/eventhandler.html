@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handling</title>
+</head>
+<body>
+    <h1>Google</h1>
+    <!-- Types of Event Handlers used in javascript -->
+    <p>
+        <!-- Onclick -->
+        <a href="https://www.google.com" id="google" onclick="return yesorno()"><div style="font-size: 50px;">Google</div></a>
+        <br><br>
+        <!-- onmouseover -->
+        <a href="https://www.google.com" onmouseover="alert('Your battery is draining faster.')"><input type="button" value="Search"></a>
+        <br><br>
+        <!-- Onload -->
+        <img src="C.jpeg" alt="Dogs and cats.jpeg" width="350px" onload="alert('VIRUS ALERT')"> <br><br>
+        <!-- Onmouseout -->
+        <a href="https://www.github.com" onmouseout="alert('VIRUS ALERT')">Github</a>
+        <br><br>
+        <!-- onunload -->
+        <a href="https://www.youtube.com" style="font-size: large;" onselect="alert('Youtube is a online social media platform')"> Youtube</a>
+        
+    </p>
+    <script>
+        function yesorno()
+        {
+            let a= confirm("Are you sure you want to leave this website?");
+            if (a==true){
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

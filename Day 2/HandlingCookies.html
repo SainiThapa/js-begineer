@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie handling</title>
+</head>
+<body>
+    <p>
+        <h1>Cookie Handling</h1>
+        <div>
+            <form onsubmit="Setcookie()" name="myform">
+                <label for="name">Name: </label>
+                <input type="text" id="Name" name="Name"> <br> <br>
+                <input type="submit" value="Set Cookie">
+                <!-- <input type="button" value="Set Cookie" onclick="Setcookie()"> <br> <br> -->
+                <input type="button" value="Get Cookie" onclick="getcookie()"> <br> <br>
+                
+            </form>
+        </div>
+    </p>
+    <script>
+        function Setcookie()
+        {
+           var a = document.forms["myform"]["Name"].value;
+           document.cookie = a;
+            // document.cookie = "Sushil : Gyawali";
+        }
+        function getcookie()
+        {
+            if(document.cookie.length!=0)
+            {
+                alert(document.cookie);
+            }
+            else{
+                alert("No Cookie available");
+            }
+        }
+    </script>
+</body>
+</html>

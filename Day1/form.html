@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validation</title>
+</head>
+<body>
+    <h1>FREE REGISTRATION</h1>
+    <div id="C050">
+        <p">
+            <form id="Myform" onsubmit="return validate()">
+                <label for="Name">Full Name</label> <br> <br>
+                <input type="text" id="name" name="name"> <br><br>
+
+                <label for="Email">E-mail address</label> <br> <br>
+                <input type="Email" id="email"  name="email"> <br><br>
+
+                <label for="password">Password</label> <br> <br>
+                <input type="password" id="password" name="password"> <br><br>
+
+                Select your prefered course/s: <br> <br>
+                <input type="checkbox" name="JSnode" value="JSnode" >
+                <label for="JSnode">JSnode</label> <br> <br>
+            <input type="checkbox" name="Python" value="Python" >
+            <label for="Python">Python</label> <br> <br>
+            <input type="checkbox" name="Mongo" value="Mongo" >
+            <label for="Mongo">Mongo</label> <br> <br>
+            <input type="submit" value="submit">
+        </form>
+    </p>
+    </div>
+    <script>
+        function validate()
+        {
+            var a=document.forms["Myform"]["name"].value;
+            var b=document.forms["Myform"]["email"].value;
+            var c=document.forms["Myform"]["password"].value;
+            if(a=="")
+            {
+                alert("Empty names not allowed");
+                return false;
+            }
+            if(b=="")
+            {
+                alert("Empty Emails not allowed.");
+                return false;
+            }
+            if(c=="")
+            {
+                alert("Invalid password !! Password length must be atleast 8 characters.");
+                return false;
+            }
+            if(c.length<8)
+            { 
+                alert("Invalid password !! Password length must be atleast 8 characters.");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>

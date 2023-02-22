@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Effects</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+            .box{
+                width: 200px;
+                height: 200px;
+                background-color: #f0f;
+                /* display: none; */
+            }
+    </style>
+</head>
+<body>
+<button id="toggleButton">Toggle Box</button> <br><br>
+<div class="box">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, perspiciatis fuga. Sequi dolore vitae, ab architecto asperiores vero alias possimus quod, modi animi illum error ipsa odio voluptates provident! Facilis.</div>
+<p>Lorem, ipsum dolor.</p>
+<script>
+    $('toggleButton').click(function(){
+        $('.box').fadeToggle(1000);
+        $('p').slideDown(1000);
+    });
+</script>
+</body>
+</html>
